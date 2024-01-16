@@ -1,9 +1,12 @@
 import Image from "next/image";
+import { fetchAnime } from "./action";
 
-export default function Home() {
+export default async function Home() {
+  const data = await fetchAnime(1);
+  console.log(data);
   return (
     <main>
-      <h2>Anime Vault</h2>
+      <h1>Explore Anime</h1>
     </main>
   );
 }

@@ -4,8 +4,25 @@
 
 :root {
   color-scheme: dark;
+  --clr-primary-300: hsl(219, 76%, 55%);
+  --clr-primary-400: hsl(219, 76%, 40%);
+  --clr-primary-500: hsl(219, 76%, 25%);
+  --clr-secondary-300: hsl(269, 75%, 55%);
+  --clr-secondary-400: hsl(269, 75%, 40%);
+  --clr-secondary-500: hsl(269, 75%, 25%);
+  --clr-accent-300: hsl(358, 72%, 65%);
+  --clr-accent-400: hsl(358, 72%, 50%);
+  --clr-accent-500: hsl(358, 72%, 35%);
 }
 
 body {
   background: #000;
+}
+
+.page-title {
+  line-height: 1.05;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-shadow: 2px 2px 2px var(--clr-accent-400),
+    4px 4px 0 var(--clr-secondary-400), 6px 6px 0 var(--clr-primary-400);
 }

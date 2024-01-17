@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { fetchAnime } from "./action";
+import LoadMore from "@/components/LoadMore";
 
 export default async function Home() {
   const data = await fetchAnime(1);
@@ -10,6 +11,7 @@ export default async function Home() {
       <section className="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {data}
       </section>
+      <LoadMore />
     </main>
   );
 }

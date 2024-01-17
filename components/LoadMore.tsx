@@ -14,6 +14,7 @@ const LoadMore = () => {
   const [data, setData] = useState<AnimeCard[]>([]);
 
   useEffect(() => {
+    //if in view, increase the page to present the user with all the data resulting in infinite scrolling
     if (inView) {
       fetchAnime(page).then((res) => {
         setData([...data, ...res]);

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export interface AnimeProps {
@@ -11,6 +12,7 @@ export interface AnimeProps {
   episodes: number;
   episodes_aired: number;
   score: string;
+  url: string;
 }
 
 interface Props {
@@ -26,7 +28,7 @@ const AnimeCard = ({ anime, index }: Props) => {
           src={`https://shikimori.one${anime.image.original}`}
           alt={anime.name}
           fill
-          className="rounded-xl"
+          className=" rounded-xl"
         />
       </div>
 
@@ -64,6 +66,11 @@ const AnimeCard = ({ anime, index }: Props) => {
             </span>
           </div>
         </div>
+        <button className="w-full p-3 text-base font-medium text-white transition-all rounded-lg hover:bg-sky-600 focus:bg-sky-600 bg-sky-500">
+          <Link target="_blank" href={`https://shikimori.one${anime.url}`}>
+            Watch
+          </Link>
+        </button>
       </article>
     </div>
   );
